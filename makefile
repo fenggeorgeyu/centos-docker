@@ -11,10 +11,10 @@ pull:
 
 create:
 	docker run --name ${name} -d -it \
-		-v ${git_dir}:git\
+		-v ${git_dir}:/git \
 		--restart=always ${image}
 
-connect:
+bash:
 	docker exec -it ${name} /bin/bash
 
 stop:
