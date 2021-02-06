@@ -7,7 +7,7 @@ name=centos-docker1
 all:
 
 pull:
-	docer pull ${image}
+	docker pull ${image}
 
 create:
 	docker run --name ${name} -d -it \
