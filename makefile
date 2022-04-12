@@ -12,7 +12,9 @@ pull:
 create:
 	docker run --name ${name} -d -it \
 		-v ${git_dir}:/git \
-		--restart=always ${image}
+		${image}
+
+# --restart=always 
 
 bash:
 	docker exec -it ${name} /bin/bash
